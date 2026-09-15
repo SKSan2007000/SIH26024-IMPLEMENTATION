@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1d4ed8;
+  --color-secondary: #0f172a;
+}
+
+/* Custom Leaflet Popup styles for dark theme */
+.custom-popup .leaflet-popup-content-wrapper,
+.custom-popup .leaflet-popup-tip {
+  background: #0f172a; /* slate-900 */
+  color: #f1f5f9; /* slate-100 */
+  border: 1px solid #1e293b; /* slate-800 */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+}
+
+.custom-popup .leaflet-popup-content {
+  margin: 12px;
+}
+
+.custom-popup .leaflet-popup-close-button {
+  color: #94a3b8 !important; /* slate-400 */
+}
+
+.custom-popup .leaflet-popup-close-button:hover {
+  color: #f8fafc !important; /* slate-50 */
+}
