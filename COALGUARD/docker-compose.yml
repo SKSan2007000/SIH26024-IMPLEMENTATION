@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: coalguard-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./coalguard.db
+      - SECRET_KEY=coalguard-sih-2026-secret-key-production-ready
+      - API_V1_STR=/api
+      - PROJECT_NAME=CoalGuard AI
+      - DEMO_MODE=true
+    volumes:
+      - ./backend/coalguard.db:/app/coalguard.db
+      - ./backend/ml/artifacts:/app/ml/artifacts
+      - ./backend/uploads:/app/uploads
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: coalguard-frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    restart: unless-stopped
