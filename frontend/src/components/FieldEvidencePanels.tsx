@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { api } from '../services/api';
+import { api, API_BASE_URL } from '../services/api';
 import { authFetch } from '../services/AuthContext';
 
 interface AuthImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
@@ -149,7 +149,7 @@ export const FieldEvidencePanel: React.FC<FieldEvidencePanelProps> = ({ actionId
             {evidenceList.map(ev => (
               <div key={ev.id} className="min-w-[150px] bg-slate-800 p-2 rounded border border-slate-600 text-xs">
                 {ev.photo_path && (
-                  <AuthImage src={`/api/field-evidence/photo/${ev.id}`} alt="Evidence" className="w-full h-20 object-cover rounded mb-2 bg-black" />
+                  <AuthImage src={`${API_BASE_URL}/field-evidence/photo/${ev.id}`} alt="Evidence" className="w-full h-20 object-cover rounded mb-2 bg-black" />
                 )}
                 <div>Lat: {ev.latitude.toFixed(4)}</div>
                 <div>Lng: {ev.longitude.toFixed(4)}</div>
@@ -269,7 +269,7 @@ export const SupervisorReviewPanel: React.FC<{ actionId: string, onVerify: () =>
           <div key={ev.id} className="bg-slate-800 p-3 rounded border border-slate-700 text-sm flex flex-col gap-3">
             <div className="flex gap-4">
               {ev.photo_path ? (
-                <AuthImage src={`/api/field-evidence/photo/${ev.id}`} alt="Evidence" className="w-32 h-32 object-cover rounded bg-black" />
+                <AuthImage src={`${API_BASE_URL}/field-evidence/photo/${ev.id}`} alt="Evidence" className="w-32 h-32 object-cover rounded bg-black" />
               ) : (
                 <div className="w-32 h-32 bg-slate-900 rounded flex items-center justify-center text-slate-500 text-xs">No Photo</div>
               )}

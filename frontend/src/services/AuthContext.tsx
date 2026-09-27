@@ -28,6 +28,9 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 const TOKEN_KEY = 'coalguard_token';
 const USER_KEY = 'coalguard_user';
 
+const RAW_API_URL = import.meta.env.VITE_API_URL || '';
+const API_BASE_URL = RAW_API_URL ? `${RAW_API_URL.replace(/\/+$/, '')}/api` : '/api';
+
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<AuthUser | null>(null);
   const [token, setToken] = useState<string | null>(null);
@@ -54,7 +57,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     formData.append('username', email);
     formData.append('password', password);
 
-    const response = await fetch('/api/auth/login', {
+    const response = await fetch(`${API_BASE_URL}/auth/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: formData.toString(),
@@ -124,7 +127,8 @@ export async function authFetch(url: string, options: RequestInit = {}): Promise
     headers.set('Authorization', `Bearer ${token}`);
   }
 
-  const response = await fetch(url, { ...options, headers });
+  const resolvedUrl = url.startsWith('/api') && RAW_API_URL ? `${RAW_API_URL.replace(/\/+$/, '')}${url}` : url;
+  const response = await fetch(resolvedUrl, { ...options, headers });
 
   // Auto-logout on auth failure
   if (response.status === 401 || response.status === 403) {
