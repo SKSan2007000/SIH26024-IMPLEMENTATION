@@ -8,6 +8,7 @@ export default defineConfig({
     tailwindcss(),
     react(),
   ],
+  envPrefix: ['VITE_', 'NEXT_PUBLIC_'],
   server: {
     proxy: {
       '/api': {

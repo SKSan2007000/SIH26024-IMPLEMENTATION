@@ -28,8 +28,28 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 const TOKEN_KEY = 'coalguard_token';
 const USER_KEY = 'coalguard_user';
 
-const RAW_API_URL = import.meta.env.VITE_API_URL || '';
-const API_BASE_URL = RAW_API_URL ? `${RAW_API_URL.replace(/\/+$/, '')}/api` : '/api';
+export const getRawApiUrl = (): string => {
+  const env = import.meta.env;
+  const url = (env.VITE_API_URL || env.NEXT_PUBLIC_API_URL || '') as string;
+  if (!url || typeof url !== 'string' || url === 'undefined' || url === 'null') {
+    return '';
+  }
+  return url.trim();
+};
+
+export const getApiBaseUrl = (): string => {
+  const raw = getRawApiUrl();
+  if (!raw) {
+    return '/api';
+  }
+  const clean = raw.replace(/\/+$/, '');
+  if (clean.endsWith('/api')) {
+    return clean;
+  }
+  return `${clean}/api`;
+};
+
+export const API_BASE_URL = getApiBaseUrl();
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<AuthUser | null>(null);
@@ -127,7 +147,16 @@ export async function authFetch(url: string, options: RequestInit = {}): Promise
     headers.set('Authorization', `Bearer ${token}`);
   }
 
-  const resolvedUrl = url.startsWith('/api') && RAW_API_URL ? `${RAW_API_URL.replace(/\/+$/, '')}${url}` : url;
+  const raw = getRawApiUrl();
+  let resolvedUrl = url;
+  if (raw && url.startsWith('/api')) {
+    const base = raw.replace(/\/+$/, '');
+    if (base.endsWith('/api')) {
+      resolvedUrl = `${base}${url.substring(4)}`;
+    } else {
+      resolvedUrl = `${base}${url}`;
+    }
+  }
   const response = await fetch(resolvedUrl, { ...options, headers });
 
   // Auto-logout on auth failure

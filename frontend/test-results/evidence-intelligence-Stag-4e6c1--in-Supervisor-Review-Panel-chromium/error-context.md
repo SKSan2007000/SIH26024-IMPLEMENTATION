@@ -140,11 +140,11 @@ Call log:
       - generic [ref=f1e85]:
         - generic [ref=f1e86]:
           - heading "Baseline Risk" [level=3] [ref=f1e87]
-          - generic [ref=f1e88]: "77.0"
-          - generic [ref=f1e89]: CRITICAL
+          - generic [ref=f1e88]: "60.5"
+          - generic [ref=f1e89]: HIGH
         - generic [ref=f1e90]:
           - heading "30-Day Critical Risk Probability" [level=3] [ref=f1e91]
-          - generic [ref=f1e92]: 81%
+          - generic [ref=f1e92]: 52%
           - generic [ref=f1e93]: XGBoost Early Warning
         - generic [ref=f1e94]:
           - heading "Behavioral Anomaly" [level=3] [ref=f1e95]
@@ -153,216 +153,464 @@ Call log:
       - paragraph [ref=f1e98]: Risk and prediction values are dynamically recalculated after underlying operational data changes.
     - generic [ref=f1e99]:
       - generic [ref=f1e100]:
-        - heading "AI Recommendations 0" [level=2] [ref=f1e101]:
+        - heading "AI Recommendations 1" [level=2] [ref=f1e101]:
           - text: AI Recommendations
-          - generic [ref=f1e102]: "0"
-        - generic [ref=f1e103]: No active recommendations. The mine is operating within acceptable parameters.
-      - generic [ref=f1e105]:
-        - heading "Active Actions 22" [level=2] [ref=f1e106]:
-          - text: Active Actions
-          - generic [ref=f1e107]: "22"
-        - generic [ref=f1e108]:
-          - generic [ref=f1e109]:
+          - generic [ref=f1e102]: "1"
+        - generic [ref=f1e104]:
+          - generic [ref=f1e105]: "Priority: HIGH | Source: BASELINE_RISK"
+          - generic [ref=f1e106]:
+            - heading "🟠 Priority Governance Review" [level=3] [ref=f1e107]
+            - paragraph [ref=f1e108]: The mine's baseline risk is high. Review operational safety and environment indicators.
+            - generic [ref=f1e109]: "AI Explanation: HIGH baseline risk calculated from operational data."
             - generic [ref=f1e110]:
-              - generic [ref=f1e111]:
-                - heading "Synthetic Action" [level=3] [ref=f1e112]
-                - paragraph [ref=f1e113]: Auto-generated
-              - generic [ref=f1e114]: COMPLETED
-            - generic [ref=f1e115]: "Due: 7/29/2026"
-            - button "Verify & Close" [ref=f1e118]
-          - generic [ref=f1e119]:
-            - generic [ref=f1e120]:
-              - generic [ref=f1e121]:
-                - heading "Synthetic Action" [level=3] [ref=f1e122]
-                - paragraph [ref=f1e123]: Auto-generated
-              - generic [ref=f1e124]: COMPLETED
-            - generic [ref=f1e125]: "Due: 7/31/2026"
-            - button "Verify & Close" [ref=f1e128]
-          - generic [ref=f1e129]:
-            - generic [ref=f1e130]:
-              - generic [ref=f1e131]:
-                - heading "Synthetic Action" [level=3] [ref=f1e132]
-                - paragraph [ref=f1e133]: Auto-generated
-              - generic [ref=f1e134]: COMPLETED
-            - generic [ref=f1e135]: "Due: 8/4/2026"
-            - button "Verify & Close" [ref=f1e138]
-          - generic [ref=f1e139]:
-            - generic [ref=f1e140]:
-              - generic [ref=f1e141]:
-                - heading "Synthetic Action" [level=3] [ref=f1e142]
-                - paragraph [ref=f1e143]: Auto-generated
-              - generic [ref=f1e144]: COMPLETED
-            - generic [ref=f1e145]: "Due: 8/10/2026"
-            - button "Verify & Close" [ref=f1e148]
-          - generic [ref=f1e149]:
-            - generic [ref=f1e150]:
-              - generic [ref=f1e151]:
-                - heading "Synthetic Action" [level=3] [ref=f1e152]
-                - paragraph [ref=f1e153]: Auto-generated
-              - generic [ref=f1e154]: COMPLETED
-            - generic [ref=f1e155]: "Due: 8/16/2026"
-            - button "Verify & Close" [ref=f1e158]
-          - generic [ref=f1e159]:
-            - generic [ref=f1e160]:
-              - generic [ref=f1e161]:
-                - heading "Synthetic Action" [level=3] [ref=f1e162]
-                - paragraph [ref=f1e163]: Auto-generated
-              - generic [ref=f1e164]: OPEN
-            - generic [ref=f1e165]: "Due: 8/19/2026"
-            - button "Start Progress" [ref=f1e168]
-          - generic [ref=f1e169]:
-            - generic [ref=f1e170]:
-              - generic [ref=f1e171]:
-                - heading "Synthetic Action" [level=3] [ref=f1e172]
-                - paragraph [ref=f1e173]: Auto-generated
-              - generic [ref=f1e174]: COMPLETED
-            - generic [ref=f1e175]: "Due: 8/20/2026"
-            - button "Verify & Close" [ref=f1e178]
-          - generic [ref=f1e179]:
-            - generic [ref=f1e180]:
-              - generic [ref=f1e181]:
-                - heading "Synthetic Action" [level=3] [ref=f1e182]
-                - paragraph [ref=f1e183]: Auto-generated
-              - generic [ref=f1e184]: COMPLETED
-            - generic [ref=f1e185]: "Due: 8/23/2026"
-            - button "Verify & Close" [ref=f1e188]
-          - generic [ref=f1e189]:
-            - generic [ref=f1e190]:
-              - generic [ref=f1e191]:
-                - heading "Synthetic Action" [level=3] [ref=f1e192]
-                - paragraph [ref=f1e193]: Auto-generated
-              - generic [ref=f1e194]: OPEN
-            - generic [ref=f1e195]: "Due: 8/25/2026"
-            - button "Start Progress" [ref=f1e198]
-          - generic [ref=f1e199]:
-            - generic [ref=f1e200]:
-              - generic [ref=f1e201]:
-                - heading "Synthetic Action" [level=3] [ref=f1e202]
-                - paragraph [ref=f1e203]: Auto-generated
-              - generic [ref=f1e204]: COMPLETED
-            - generic [ref=f1e205]: "Due: 8/26/2026"
-            - button "Verify & Close" [ref=f1e208]
-          - generic [ref=f1e209]:
-            - generic [ref=f1e210]:
-              - generic [ref=f1e211]:
-                - heading "Synthetic Action" [level=3] [ref=f1e212]
-                - paragraph [ref=f1e213]: Auto-generated
-              - generic [ref=f1e214]: COMPLETED
-            - generic [ref=f1e215]: "Due: 8/29/2026"
-            - button "Verify & Close" [ref=f1e218]
-          - generic [ref=f1e219]:
-            - generic [ref=f1e220]:
-              - generic [ref=f1e221]:
-                - heading "Synthetic Action" [level=3] [ref=f1e222]
-                - paragraph [ref=f1e223]: Auto-generated
-              - generic [ref=f1e224]: OPEN
-            - generic [ref=f1e225]: "Due: 9/6/2026"
-            - button "Start Progress" [ref=f1e228]
-          - generic [ref=f1e229]:
-            - generic [ref=f1e230]:
-              - generic [ref=f1e231]:
-                - heading "Synthetic Action" [level=3] [ref=f1e232]
-                - paragraph [ref=f1e233]: Auto-generated
-              - generic [ref=f1e234]: COMPLETED
-            - generic [ref=f1e235]: "Due: 9/14/2026"
-            - button "Verify & Close" [ref=f1e238]
-          - generic [ref=f1e239]:
-            - generic [ref=f1e240]:
-              - generic [ref=f1e241]:
-                - heading "Deploy Continuous Water Mist Cannons on North Haul Road" [level=3] [ref=f1e242]
-                - paragraph [ref=f1e243]: Suppress active particulate dust spike along KM 2.4 haul route to bring PM10 below 100 μg/m³.
-              - generic [ref=f1e244]: IN_PROGRESS
-            - generic [ref=f1e245]: "Due: 9/15/2026"
+              - button "Reject" [ref=f1e111]
+              - button "Accept & Assign" [ref=f1e112]
+      - generic [ref=f1e113]:
+        - heading "Active Actions 52" [level=2] [ref=f1e114]:
+          - text: Active Actions
+          - generic [ref=f1e115]: "52"
+        - generic [ref=f1e116]:
+          - generic [ref=f1e117]:
+            - generic [ref=f1e118]:
+              - generic [ref=f1e119]:
+                - heading "Synthetic Action" [level=3] [ref=f1e120]
+                - paragraph [ref=f1e121]: Auto-generated
+              - generic [ref=f1e122]: COMPLETED
+            - generic [ref=f1e123]: "Due: 7/29/2026"
+            - button "Verify & Close" [ref=f1e126]
+          - generic [ref=f1e127]:
+            - generic [ref=f1e128]:
+              - generic [ref=f1e129]:
+                - heading "Synthetic Action" [level=3] [ref=f1e130]
+                - paragraph [ref=f1e131]: Auto-generated
+              - generic [ref=f1e132]: COMPLETED
+            - generic [ref=f1e133]: "Due: 7/31/2026"
+            - button "Verify & Close" [ref=f1e136]
+          - generic [ref=f1e137]:
+            - generic [ref=f1e138]:
+              - generic [ref=f1e139]:
+                - heading "Synthetic Action" [level=3] [ref=f1e140]
+                - paragraph [ref=f1e141]: Auto-generated
+              - generic [ref=f1e142]: COMPLETED
+            - generic [ref=f1e143]: "Due: 8/4/2026"
+            - button "Verify & Close" [ref=f1e146]
+          - generic [ref=f1e147]:
+            - generic [ref=f1e148]:
+              - generic [ref=f1e149]:
+                - heading "Synthetic Action" [level=3] [ref=f1e150]
+                - paragraph [ref=f1e151]: Auto-generated
+              - generic [ref=f1e152]: OPEN
+            - generic [ref=f1e153]: "Due: 8/8/2026"
+            - button "Start Progress" [ref=f1e156]
+          - generic [ref=f1e157]:
+            - generic [ref=f1e158]:
+              - generic [ref=f1e159]:
+                - heading "Synthetic Action" [level=3] [ref=f1e160]
+                - paragraph [ref=f1e161]: Auto-generated
+              - generic [ref=f1e162]: COMPLETED
+            - generic [ref=f1e163]: "Due: 8/10/2026"
+            - button "Verify & Close" [ref=f1e166]
+          - generic [ref=f1e167]:
+            - generic [ref=f1e168]:
+              - generic [ref=f1e169]:
+                - heading "Synthetic Action" [level=3] [ref=f1e170]
+                - paragraph [ref=f1e171]: Auto-generated
+              - generic [ref=f1e172]: OPEN
+            - generic [ref=f1e173]: "Due: 8/11/2026"
+            - button "Start Progress" [ref=f1e176]
+          - generic [ref=f1e177]:
+            - generic [ref=f1e178]:
+              - generic [ref=f1e179]:
+                - heading "Synthetic Action" [level=3] [ref=f1e180]
+                - paragraph [ref=f1e181]: Auto-generated
+              - generic [ref=f1e182]: OPEN
+            - generic [ref=f1e183]: "Due: 8/12/2026"
+            - button "Start Progress" [ref=f1e186]
+          - generic [ref=f1e187]:
+            - generic [ref=f1e188]:
+              - generic [ref=f1e189]:
+                - heading "Synthetic Action" [level=3] [ref=f1e190]
+                - paragraph [ref=f1e191]: Auto-generated
+              - generic [ref=f1e192]: COMPLETED
+            - generic [ref=f1e193]: "Due: 8/16/2026"
+            - button "Verify & Close" [ref=f1e196]
+          - generic [ref=f1e197]:
+            - generic [ref=f1e198]:
+              - generic [ref=f1e199]:
+                - heading "Synthetic Action" [level=3] [ref=f1e200]
+                - paragraph [ref=f1e201]: Auto-generated
+              - generic [ref=f1e202]: OPEN
+            - generic [ref=f1e203]: "Due: 8/17/2026"
+            - button "Start Progress" [ref=f1e206]
+          - generic [ref=f1e207]:
+            - generic [ref=f1e208]:
+              - generic [ref=f1e209]:
+                - heading "Synthetic Action" [level=3] [ref=f1e210]
+                - paragraph [ref=f1e211]: Auto-generated
+              - generic [ref=f1e212]: COMPLETED
+            - generic [ref=f1e213]: "Due: 8/18/2026"
+            - button "Verify & Close" [ref=f1e216]
+          - generic [ref=f1e217]:
+            - generic [ref=f1e218]:
+              - generic [ref=f1e219]:
+                - heading "Synthetic Action" [level=3] [ref=f1e220]
+                - paragraph [ref=f1e221]: Auto-generated
+              - generic [ref=f1e222]: OPEN
+            - generic [ref=f1e223]: "Due: 8/19/2026"
+            - button "Start Progress" [ref=f1e226]
+          - generic [ref=f1e227]:
+            - generic [ref=f1e228]:
+              - generic [ref=f1e229]:
+                - heading "Synthetic Action" [level=3] [ref=f1e230]
+                - paragraph [ref=f1e231]: Auto-generated
+              - generic [ref=f1e232]: COMPLETED
+            - generic [ref=f1e233]: "Due: 8/20/2026"
+            - button "Verify & Close" [ref=f1e236]
+          - generic [ref=f1e237]:
+            - generic [ref=f1e238]:
+              - generic [ref=f1e239]:
+                - heading "Synthetic Action" [level=3] [ref=f1e240]
+                - paragraph [ref=f1e241]: Auto-generated
+              - generic [ref=f1e242]: COMPLETED
+            - generic [ref=f1e243]: "Due: 8/20/2026"
+            - button "Verify & Close" [ref=f1e246]
+          - generic [ref=f1e247]:
             - generic [ref=f1e248]:
-              - heading "Field Evidence Collection (Officer View)" [level=4] [ref=f1e249]
-              - generic [ref=f1e250]:
-                - generic [ref=f1e251]: Submitted Evidence (1)
-                - generic [ref=f1e253]:
-                  - generic [ref=f1e255]: "Lat: 22.3490"
-                  - generic [ref=f1e256]: "Lng: 82.6790"
-                  - generic [ref=f1e257]: Mist cannons deployed and operational at KM 2.4. Water spray suppression active across haul corridor.
-              - generic [ref=f1e258]:
-                - generic [ref=f1e259]:
-                  - generic [ref=f1e260]: Photo Evidence
-                  - button "Choose File" [ref=f1e261]
-                - generic [ref=f1e262]:
-                  - generic [ref=f1e263]: GPS Coordinates
-                  - generic [ref=f1e264]:
-                    - button "Capture GPS" [ref=f1e265]
-                    - button "Demo GPS" [ref=f1e266]
-                  - generic [ref=f1e267]:
-                    - textbox "Latitude" [ref=f1e268]
-                    - textbox "Longitude" [ref=f1e269]
-                - generic [ref=f1e270]:
-                  - generic [ref=f1e271]: Remarks
-                  - textbox "Add context or notes about the evidence..." [ref=f1e272]
-                - generic [ref=f1e273]:
-                  - button "Submit Evidence" [disabled] [ref=f1e274]
-                  - button "Submit for Review" [ref=f1e275]
-          - generic [ref=f1e276]:
-            - generic [ref=f1e277]:
-              - generic [ref=f1e278]:
-                - heading "Suspend HeavyLift Dumper Operations pending Operator Re-training" [level=3] [ref=f1e279]
-                - paragraph [ref=f1e280]: HeavyLift drivers must complete mandatory DGMS simulator refresher before haul route re-entry.
-              - generic [ref=f1e281]: OPEN
-            - generic [ref=f1e282]: "Due: 9/16/2026"
-            - button "Start Progress" [ref=f1e285]
-          - generic [ref=f1e286]:
-            - generic [ref=f1e287]:
-              - generic [ref=f1e288]:
-                - heading "Synthetic Action" [level=3] [ref=f1e289]
-                - paragraph [ref=f1e290]: Auto-generated
-              - generic [ref=f1e291]: COMPLETED
-            - generic [ref=f1e292]: "Due: 9/16/2026"
-            - button "Verify & Close" [ref=f1e295]
-          - generic [ref=f1e296]:
-            - generic [ref=f1e297]:
-              - generic [ref=f1e298]:
-                - 'heading "Incident Escalation: EQUIPMENT" [level=3] [ref=f1e299]'
-                - paragraph [ref=f1e300]: "E2E TEST: The main ventilation fan in section 4 has completely failed."
-              - generic [ref=f1e301]: OPEN
-            - generic [ref=f1e302]: "Due: 9/16/2026"
-            - button "Start Progress" [ref=f1e305]
-          - generic [ref=f1e306]:
-            - generic [ref=f1e307]:
-              - generic [ref=f1e308]:
-                - 'heading "Incident Escalation: EQUIPMENT" [level=3] [ref=f1e309]'
-                - paragraph [ref=f1e310]: "E2E TEST: The main ventilation fan in section 4 has completely failed."
-              - generic [ref=f1e311]: OPEN
-            - generic [ref=f1e312]: "Due: 9/16/2026"
-            - button "Start Progress" [ref=f1e315]
-          - generic [ref=f1e316]:
-            - generic [ref=f1e317]:
-              - generic [ref=f1e318]:
-                - heading "Synthetic Action" [level=3] [ref=f1e319]
-                - paragraph [ref=f1e320]: Auto-generated
-              - generic [ref=f1e321]: COMPLETED
-            - generic [ref=f1e322]: "Due: 9/21/2026"
-            - button "Verify & Close" [ref=f1e325]
-          - generic [ref=f1e326]:
-            - generic [ref=f1e327]:
-              - generic [ref=f1e328]:
-                - heading "Immediate Governance Review" [level=3] [ref=f1e329]
-                - paragraph [ref=f1e330]: "[AI Recommended] The mine's baseline risk has reached a critical level. Immediate review required. Reason: CRITICAL baseline risk calculated from operational data."
-              - generic [ref=f1e331]: OPEN
-            - generic [ref=f1e332]: "Due: 9/22/2026"
-            - button "Start Progress" [ref=f1e335]
-          - generic [ref=f1e336]:
-            - generic [ref=f1e337]:
-              - generic [ref=f1e338]:
-                - 'heading "Renew Expired Document: Environmental Clearance (MoEFCC)" [level=3] [ref=f1e339]'
-                - paragraph [ref=f1e340]: "[AI Recommended] Document EC-MOEF-2021-9982 expired on 2026-09-05T03:27:09.870342. Reason: Compliance document is expired."
-              - generic [ref=f1e341]: OPEN
-            - generic [ref=f1e342]: "Due: 9/22/2026"
-            - button "Start Progress" [ref=f1e345]
-          - generic [ref=f1e346]:
-            - generic [ref=f1e347]:
-              - generic [ref=f1e348]:
-                - heading "Preventive Safety Inspection" [level=3] [ref=f1e349]
-                - paragraph [ref=f1e350]: "[AI Recommended] AI predicts a 96% probability of critical risk in the next 30 days. Reason: High XGBoost probability of impending critical risk."
-              - generic [ref=f1e351]: OPEN
-            - generic [ref=f1e352]: "Due: 9/22/2026"
-            - button "Start Progress" [ref=f1e355]
+              - generic [ref=f1e249]:
+                - heading "Synthetic Action" [level=3] [ref=f1e250]
+                - paragraph [ref=f1e251]: Auto-generated
+              - generic [ref=f1e252]: COMPLETED
+            - generic [ref=f1e253]: "Due: 8/22/2026"
+            - button "Verify & Close" [ref=f1e256]
+          - generic [ref=f1e257]:
+            - generic [ref=f1e258]:
+              - generic [ref=f1e259]:
+                - heading "Synthetic Action" [level=3] [ref=f1e260]
+                - paragraph [ref=f1e261]: Auto-generated
+              - generic [ref=f1e262]: COMPLETED
+            - generic [ref=f1e263]: "Due: 8/22/2026"
+            - button "Verify & Close" [ref=f1e266]
+          - generic [ref=f1e267]:
+            - generic [ref=f1e268]:
+              - generic [ref=f1e269]:
+                - heading "Synthetic Action" [level=3] [ref=f1e270]
+                - paragraph [ref=f1e271]: Auto-generated
+              - generic [ref=f1e272]: COMPLETED
+            - generic [ref=f1e273]: "Due: 8/23/2026"
+            - button "Verify & Close" [ref=f1e276]
+          - generic [ref=f1e277]:
+            - generic [ref=f1e278]:
+              - generic [ref=f1e279]:
+                - heading "Synthetic Action" [level=3] [ref=f1e280]
+                - paragraph [ref=f1e281]: Auto-generated
+              - generic [ref=f1e282]: OPEN
+            - generic [ref=f1e283]: "Due: 8/25/2026"
+            - button "Start Progress" [ref=f1e286]
+          - generic [ref=f1e287]:
+            - generic [ref=f1e288]:
+              - generic [ref=f1e289]:
+                - heading "Synthetic Action" [level=3] [ref=f1e290]
+                - paragraph [ref=f1e291]: Auto-generated
+              - generic [ref=f1e292]: COMPLETED
+            - generic [ref=f1e293]: "Due: 8/25/2026"
+            - button "Verify & Close" [ref=f1e296]
+          - generic [ref=f1e297]:
+            - generic [ref=f1e298]:
+              - generic [ref=f1e299]:
+                - heading "Synthetic Action" [level=3] [ref=f1e300]
+                - paragraph [ref=f1e301]: Auto-generated
+              - generic [ref=f1e302]: COMPLETED
+            - generic [ref=f1e303]: "Due: 8/26/2026"
+            - button "Verify & Close" [ref=f1e306]
+          - generic [ref=f1e307]:
+            - generic [ref=f1e308]:
+              - generic [ref=f1e309]:
+                - heading "Synthetic Action" [level=3] [ref=f1e310]
+                - paragraph [ref=f1e311]: Auto-generated
+              - generic [ref=f1e312]: COMPLETED
+            - generic [ref=f1e313]: "Due: 8/27/2026"
+            - button "Verify & Close" [ref=f1e316]
+          - generic [ref=f1e317]:
+            - generic [ref=f1e318]:
+              - generic [ref=f1e319]:
+                - heading "Synthetic Action" [level=3] [ref=f1e320]
+                - paragraph [ref=f1e321]: Auto-generated
+              - generic [ref=f1e322]: COMPLETED
+            - generic [ref=f1e323]: "Due: 8/28/2026"
+            - button "Verify & Close" [ref=f1e326]
+          - generic [ref=f1e327]:
+            - generic [ref=f1e328]:
+              - generic [ref=f1e329]:
+                - heading "Synthetic Action" [level=3] [ref=f1e330]
+                - paragraph [ref=f1e331]: Auto-generated
+              - generic [ref=f1e332]: COMPLETED
+            - generic [ref=f1e333]: "Due: 8/28/2026"
+            - button "Verify & Close" [ref=f1e336]
+          - generic [ref=f1e337]:
+            - generic [ref=f1e338]:
+              - generic [ref=f1e339]:
+                - heading "Synthetic Action" [level=3] [ref=f1e340]
+                - paragraph [ref=f1e341]: Auto-generated
+              - generic [ref=f1e342]: COMPLETED
+            - generic [ref=f1e343]: "Due: 8/29/2026"
+            - button "Verify & Close" [ref=f1e346]
+          - generic [ref=f1e347]:
+            - generic [ref=f1e348]:
+              - generic [ref=f1e349]:
+                - heading "Synthetic Action" [level=3] [ref=f1e350]
+                - paragraph [ref=f1e351]: Auto-generated
+              - generic [ref=f1e352]: COMPLETED
+            - generic [ref=f1e353]: "Due: 8/31/2026"
+            - button "Verify & Close" [ref=f1e356]
+          - generic [ref=f1e357]:
+            - generic [ref=f1e358]:
+              - generic [ref=f1e359]:
+                - heading "Synthetic Action" [level=3] [ref=f1e360]
+                - paragraph [ref=f1e361]: Auto-generated
+              - generic [ref=f1e362]: COMPLETED
+            - generic [ref=f1e363]: "Due: 9/1/2026"
+            - button "Verify & Close" [ref=f1e366]
+          - generic [ref=f1e367]:
+            - generic [ref=f1e368]:
+              - generic [ref=f1e369]:
+                - heading "Synthetic Action" [level=3] [ref=f1e370]
+                - paragraph [ref=f1e371]: Auto-generated
+              - generic [ref=f1e372]: OPEN
+            - generic [ref=f1e373]: "Due: 9/6/2026"
+            - button "Start Progress" [ref=f1e376]
+          - generic [ref=f1e377]:
+            - generic [ref=f1e378]:
+              - generic [ref=f1e379]:
+                - heading "Synthetic Action" [level=3] [ref=f1e380]
+                - paragraph [ref=f1e381]: Auto-generated
+              - generic [ref=f1e382]: COMPLETED
+            - generic [ref=f1e383]: "Due: 9/8/2026"
+            - button "Verify & Close" [ref=f1e386]
+          - generic [ref=f1e387]:
+            - generic [ref=f1e388]:
+              - generic [ref=f1e389]:
+                - heading "Synthetic Action" [level=3] [ref=f1e390]
+                - paragraph [ref=f1e391]: Auto-generated
+              - generic [ref=f1e392]: COMPLETED
+            - generic [ref=f1e393]: "Due: 9/10/2026"
+            - button "Verify & Close" [ref=f1e396]
+          - generic [ref=f1e397]:
+            - generic [ref=f1e398]:
+              - generic [ref=f1e399]:
+                - heading "Synthetic Action" [level=3] [ref=f1e400]
+                - paragraph [ref=f1e401]: Auto-generated
+              - generic [ref=f1e402]: COMPLETED
+            - generic [ref=f1e403]: "Due: 9/12/2026"
+            - button "Verify & Close" [ref=f1e406]
+          - generic [ref=f1e407]:
+            - generic [ref=f1e408]:
+              - generic [ref=f1e409]:
+                - heading "Synthetic Action" [level=3] [ref=f1e410]
+                - paragraph [ref=f1e411]: Auto-generated
+              - generic [ref=f1e412]: COMPLETED
+            - generic [ref=f1e413]: "Due: 9/13/2026"
+            - button "Verify & Close" [ref=f1e416]
+          - generic [ref=f1e417]:
+            - generic [ref=f1e418]:
+              - generic [ref=f1e419]:
+                - heading "Synthetic Action" [level=3] [ref=f1e420]
+                - paragraph [ref=f1e421]: Auto-generated
+              - generic [ref=f1e422]: COMPLETED
+            - generic [ref=f1e423]: "Due: 9/14/2026"
+            - button "Verify & Close" [ref=f1e426]
+          - generic [ref=f1e427]:
+            - generic [ref=f1e428]:
+              - generic [ref=f1e429]:
+                - heading "Synthetic Action" [level=3] [ref=f1e430]
+                - paragraph [ref=f1e431]: Auto-generated
+              - generic [ref=f1e432]: COMPLETED
+            - generic [ref=f1e433]: "Due: 9/14/2026"
+            - button "Verify & Close" [ref=f1e436]
+          - generic [ref=f1e437]:
+            - generic [ref=f1e438]:
+              - generic [ref=f1e439]:
+                - heading "Synthetic Action" [level=3] [ref=f1e440]
+                - paragraph [ref=f1e441]: Auto-generated
+              - generic [ref=f1e442]: OPEN
+            - generic [ref=f1e443]: "Due: 9/14/2026"
+            - button "Start Progress" [ref=f1e446]
+          - generic [ref=f1e447]:
+            - generic [ref=f1e448]:
+              - generic [ref=f1e449]:
+                - heading "Synthetic Action" [level=3] [ref=f1e450]
+                - paragraph [ref=f1e451]: Auto-generated
+              - generic [ref=f1e452]: COMPLETED
+            - generic [ref=f1e453]: "Due: 9/15/2026"
+            - button "Verify & Close" [ref=f1e456]
+          - generic [ref=f1e457]:
+            - generic [ref=f1e458]:
+              - generic [ref=f1e459]:
+                - heading "Deploy Continuous Water Mist Cannons on North Haul Road" [level=3] [ref=f1e460]
+                - paragraph [ref=f1e461]: Suppress active particulate dust spike along KM 2.4 haul route to bring PM10 below 100 μg/m³.
+              - generic [ref=f1e462]: IN_PROGRESS
+            - generic [ref=f1e463]: "Due: 9/15/2026"
+            - generic [ref=f1e466]:
+              - heading "Field Evidence Collection (Officer View)" [level=4] [ref=f1e467]
+              - generic [ref=f1e468]:
+                - generic [ref=f1e469]: Submitted Evidence (1)
+                - generic [ref=f1e471]:
+                  - generic [ref=f1e473]: "Lat: 22.3490"
+                  - generic [ref=f1e474]: "Lng: 82.6790"
+                  - generic [ref=f1e475]: Mist cannons deployed and operational at KM 2.4. Water spray suppression active across haul corridor.
+              - generic [ref=f1e476]:
+                - generic [ref=f1e477]:
+                  - generic [ref=f1e478]: Photo Evidence
+                  - button "Choose File" [ref=f1e479]
+                - generic [ref=f1e480]:
+                  - generic [ref=f1e481]: GPS Coordinates
+                  - generic [ref=f1e482]:
+                    - button "Capture GPS" [ref=f1e483]
+                    - button "Demo GPS" [ref=f1e484]
+                  - generic [ref=f1e485]:
+                    - textbox "Latitude" [ref=f1e486]
+                    - textbox "Longitude" [ref=f1e487]
+                - generic [ref=f1e488]:
+                  - generic [ref=f1e489]: Remarks
+                  - textbox "Add context or notes about the evidence..." [ref=f1e490]
+                - generic [ref=f1e491]:
+                  - button "Submit Evidence" [disabled] [ref=f1e492]
+                  - button "Submit for Review" [ref=f1e493]
+          - generic [ref=f1e494]:
+            - generic [ref=f1e495]:
+              - generic [ref=f1e496]:
+                - heading "Suspend HeavyLift Dumper Operations pending Operator Re-training" [level=3] [ref=f1e497]
+                - paragraph [ref=f1e498]: HeavyLift drivers must complete mandatory DGMS simulator refresher before haul route re-entry.
+              - generic [ref=f1e499]: OPEN
+            - generic [ref=f1e500]: "Due: 9/16/2026"
+            - button "Start Progress" [ref=f1e503]
+          - generic [ref=f1e504]:
+            - generic [ref=f1e505]:
+              - generic [ref=f1e506]:
+                - heading "Synthetic Action" [level=3] [ref=f1e507]
+                - paragraph [ref=f1e508]: Auto-generated
+              - generic [ref=f1e509]: COMPLETED
+            - generic [ref=f1e510]: "Due: 9/16/2026"
+            - button "Verify & Close" [ref=f1e513]
+          - generic [ref=f1e514]:
+            - generic [ref=f1e515]:
+              - generic [ref=f1e516]:
+                - 'heading "Incident Escalation: EQUIPMENT" [level=3] [ref=f1e517]'
+                - paragraph [ref=f1e518]: "E2E TEST: The main ventilation fan in section 4 has completely failed."
+              - generic [ref=f1e519]: OPEN
+            - generic [ref=f1e520]: "Due: 9/16/2026"
+            - button "Start Progress" [ref=f1e523]
+          - generic [ref=f1e524]:
+            - generic [ref=f1e525]:
+              - generic [ref=f1e526]:
+                - 'heading "Incident Escalation: EQUIPMENT" [level=3] [ref=f1e527]'
+                - paragraph [ref=f1e528]: "E2E TEST: The main ventilation fan in section 4 has completely failed."
+              - generic [ref=f1e529]: OPEN
+            - generic [ref=f1e530]: "Due: 9/16/2026"
+            - button "Start Progress" [ref=f1e533]
+          - generic [ref=f1e534]:
+            - generic [ref=f1e535]:
+              - generic [ref=f1e536]:
+                - heading "Synthetic Action" [level=3] [ref=f1e537]
+                - paragraph [ref=f1e538]: Auto-generated
+              - generic [ref=f1e539]: COMPLETED
+            - generic [ref=f1e540]: "Due: 9/16/2026"
+            - button "Verify & Close" [ref=f1e543]
+          - generic [ref=f1e544]:
+            - generic [ref=f1e545]:
+              - generic [ref=f1e546]:
+                - heading "Synthetic Action" [level=3] [ref=f1e547]
+                - paragraph [ref=f1e548]: Auto-generated
+              - generic [ref=f1e549]: COMPLETED
+            - generic [ref=f1e550]: "Due: 9/18/2026"
+            - button "Verify & Close" [ref=f1e553]
+          - generic [ref=f1e554]:
+            - generic [ref=f1e555]:
+              - generic [ref=f1e556]:
+                - heading "Synthetic Action" [level=3] [ref=f1e557]
+                - paragraph [ref=f1e558]: Auto-generated
+              - generic [ref=f1e559]: COMPLETED
+            - generic [ref=f1e560]: "Due: 9/21/2026"
+            - button "Verify & Close" [ref=f1e563]
+          - generic [ref=f1e564]:
+            - generic [ref=f1e565]:
+              - generic [ref=f1e566]:
+                - heading "Synthetic Action" [level=3] [ref=f1e567]
+                - paragraph [ref=f1e568]: Auto-generated
+              - generic [ref=f1e569]: COMPLETED
+            - generic [ref=f1e570]: "Due: 9/21/2026"
+            - button "Verify & Close" [ref=f1e573]
+          - generic [ref=f1e574]:
+            - generic [ref=f1e575]:
+              - generic [ref=f1e576]:
+                - heading "Immediate Governance Review" [level=3] [ref=f1e577]
+                - paragraph [ref=f1e578]: "[AI Recommended] The mine's baseline risk has reached a critical level. Immediate review required. Reason: CRITICAL baseline risk calculated from operational data."
+              - generic [ref=f1e579]: OPEN
+            - generic [ref=f1e580]: "Due: 9/22/2026"
+            - button "Start Progress" [ref=f1e583]
+          - generic [ref=f1e584]:
+            - generic [ref=f1e585]:
+              - generic [ref=f1e586]:
+                - 'heading "Renew Expired Document: Environmental Clearance (MoEFCC)" [level=3] [ref=f1e587]'
+                - paragraph [ref=f1e588]: "[AI Recommended] Document EC-MOEF-2021-9982 expired on 2026-09-05T03:27:09.870342. Reason: Compliance document is expired."
+              - generic [ref=f1e589]: OPEN
+            - generic [ref=f1e590]: "Due: 9/22/2026"
+            - button "Start Progress" [ref=f1e593]
+          - generic [ref=f1e594]:
+            - generic [ref=f1e595]:
+              - generic [ref=f1e596]:
+                - heading "Preventive Safety Inspection" [level=3] [ref=f1e597]
+                - paragraph [ref=f1e598]: "[AI Recommended] AI predicts a 96% probability of critical risk in the next 30 days. Reason: High XGBoost probability of impending critical risk."
+              - generic [ref=f1e599]: OPEN
+            - generic [ref=f1e600]: "Due: 9/22/2026"
+            - button "Start Progress" [ref=f1e603]
+          - generic [ref=f1e604]:
+            - generic [ref=f1e605]:
+              - generic [ref=f1e606]:
+                - heading "Synthetic Action" [level=3] [ref=f1e607]
+                - paragraph [ref=f1e608]: Auto-generated
+              - generic [ref=f1e609]: COMPLETED
+            - generic [ref=f1e610]: "Due: 9/22/2026"
+            - button "Verify & Close" [ref=f1e613]
+          - generic [ref=f1e614]:
+            - generic [ref=f1e615]:
+              - generic [ref=f1e616]:
+                - heading "Synthetic Action" [level=3] [ref=f1e617]
+                - paragraph [ref=f1e618]: Auto-generated
+              - generic [ref=f1e619]: OPEN
+            - generic [ref=f1e620]: "Due: 9/23/2026"
+            - button "Start Progress" [ref=f1e623]
+          - generic [ref=f1e624]:
+            - generic [ref=f1e625]:
+              - generic [ref=f1e626]:
+                - heading "Synthetic Action" [level=3] [ref=f1e627]
+                - paragraph [ref=f1e628]: Auto-generated
+              - generic [ref=f1e629]: COMPLETED
+            - generic [ref=f1e630]: "Due: 9/24/2026"
+            - button "Verify & Close" [ref=f1e633]
+          - generic [ref=f1e634]:
+            - generic [ref=f1e635]:
+              - generic [ref=f1e636]:
+                - heading "Synthetic Action" [level=3] [ref=f1e637]
+                - paragraph [ref=f1e638]: Auto-generated
+              - generic [ref=f1e639]: COMPLETED
+            - generic [ref=f1e640]: "Due: 9/28/2026"
+            - button "Verify & Close" [ref=f1e643]
+          - generic [ref=f1e644]:
+            - generic [ref=f1e645]:
+              - generic [ref=f1e646]:
+                - heading "Synthetic Action" [level=3] [ref=f1e647]
+                - paragraph [ref=f1e648]: Auto-generated
+              - generic [ref=f1e649]: COMPLETED
+            - generic [ref=f1e650]: "Due: 9/28/2026"
+            - button "Verify & Close" [ref=f1e653]
+          - generic [ref=f1e654]:
+            - generic [ref=f1e655]:
+              - generic [ref=f1e656]:
+                - heading "Synthetic Action" [level=3] [ref=f1e657]
+                - paragraph [ref=f1e658]: Auto-generated
+              - generic [ref=f1e659]: OPEN
+            - generic [ref=f1e660]: "Due: 10/4/2026"
+            - button "Start Progress" [ref=f1e663]
 ```
 
 # Test source

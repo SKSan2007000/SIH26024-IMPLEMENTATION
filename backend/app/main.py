@@ -72,7 +72,7 @@ if settings.FRONTEND_URL and settings.FRONTEND_URL not in cors_origins:
 app.add_middleware(
     CORSMiddleware,
     allow_origins=cors_origins,
-    allow_origin_regex=r"https://.*\.vercel\.app",
+    allow_origin_regex=r"https://.*\.vercel\.app|https://.*\.railway\.app|https://.*\.trycloudflare\.com|http://localhost(:\d+)?|http://127.0.0.1(:\d+)?",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -1,9 +1,7 @@
 // CoalGuard AI - Unified Frontend API Service Layer
 
-import { authFetch } from './AuthContext';
-
-const RAW_API_URL = import.meta.env.VITE_API_URL || '';
-export const API_BASE_URL = RAW_API_URL ? `${RAW_API_URL.replace(/\/+$/, '')}/api` : '/api';
+import { authFetch, API_BASE_URL } from './AuthContext';
+export { API_BASE_URL };
 
 export interface Region {
   id: string;
