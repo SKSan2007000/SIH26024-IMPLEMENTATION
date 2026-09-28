@@ -141,3 +141,13 @@ def root():
         "api_docs": "/docs",
         "status": "online"
     }
+
+if __name__ == "__main__":
+    import uvicorn
+    raw_port = os.environ.get("PORT", "8000")
+    try:
+        port = int(raw_port)
+    except (ValueError, TypeError):
+        port = 8000
+    host = os.environ.get("HOST", "0.0.0.0")
+    uvicorn.run("app.main:app", host=host, port=port, log_level="info")
