@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 WORKDIR /app
 
@@ -8,14 +8,15 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libgomp1 \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy and install python dependencies
 COPY requirements.txt .
+
 RUN python -m pip install --no-cache-dir -r requirements.txt
 
-# Copy backend application code
 COPY . .
 
 # Ensure upload directory exists
 RUN mkdir -p uploads ml/artifacts
 
-CMD ["python", "-c", "import os,uvicorn; uvicorn.run('app.main:app', host='0.0.0.0', port=int(os.environ.get('PORT', '8000')))"]
+ENV PYTHONUNBUFFERED=1
+
+CMD ["python", "-c", "import os,uvicorn; uvicorn.run('app.main:app', host='0.0.0.0', port=int(os.environ.get('PORT','8000')))"]
