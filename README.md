@@ -149,7 +149,7 @@ CoalGuard AI is architected for independent zero-downtime deployment:
    - Go to [railway.app](https://railway.app/) and create a new project from your GitHub repository.
 2. **Configure Service Settings**:
    - **Root Directory**: `backend`
-   - **Start Command**: Managed automatically via `backend/Procfile` and `backend/railway.json` (`uvicorn app.main:app --host 0.0.0.0 --port 8000`)
+   - **Start Command**: Leave EMPTY (controlled automatically by `backend/Dockerfile` using dynamic `PORT`)
    - **Healthcheck Path**: `/health`
 3. **Add Database (PostgreSQL)**:
    - In Railway, click **+ New** $\to$ **Database** $\to$ **PostgreSQL**.
