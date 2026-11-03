@@ -31,10 +31,15 @@ const USER_KEY = 'coalguard_user';
 export const getRawApiUrl = (): string => {
   const env = import.meta.env;
   const url = (env.VITE_API_URL || env.NEXT_PUBLIC_API_URL || '') as string;
-  if (!url || typeof url !== 'string' || url === 'undefined' || url === 'null') {
-    return '';
+  if (url && typeof url === 'string' && url !== 'undefined' && url !== 'null' && url.trim() !== '') {
+    return url.trim();
   }
-  return url.trim();
+  // Production fallback: If no explicit environment variable was injected during Vite build,
+  // use the production Railway backend URL so the deployed frontend reliably connects.
+  if (env.PROD || (typeof window !== 'undefined' && (window.location.hostname.includes('vercel.app') || !window.location.hostname.includes('localhost')))) {
+    return 'https://sih26024-implementation-production-3369.up.railway.app';
+  }
+  return '';
 };
 
 export const getApiBaseUrl = (): string => {
@@ -84,13 +89,27 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     });
 
     if (!response.ok) {
-      const err = await response.json().catch(() => ({ detail: 'Login failed' }));
-      throw new Error(err.detail || 'Login failed');
+      let errorDetail = 'Login failed. Please check your credentials.';
+      try {
+        const err = await response.json();
+        errorDetail = err.detail || errorDetail;
+      } catch {
+        if (response.status === 401) {
+          errorDetail = 'Incorrect email or password.';
+        } else if (response.status === 404) {
+          errorDetail = 'Login endpoint not found. Please verify backend service.';
+        } else if (response.status >= 500) {
+          errorDetail = 'Backend server error. Please try again shortly.';
+        }
+      }
+      throw new Error(errorDetail);
     }
 
     const data = await response.json();
     const authUser: AuthUser = {
+      id: data.user_id,
       user_id: data.user_id,
+      email: data.email || email,
       full_name: data.full_name,
       role: data.role,
       mine_id: data.mine_id,
@@ -138,7 +157,8 @@ export const useAuth = (): AuthContextType => {
 
 /**
  * Authenticated fetch wrapper. Injects the Bearer token from localStorage
- * into every request. If a 401/403 is received, clears the session.
+ * into every request. If a 401 credential validation error is received, clears the session.
+ * Does not discard valid sessions on 403 role permission denials.
  */
 export async function authFetch(url: string, options: RequestInit = {}): Promise<Response> {
   const token = localStorage.getItem(TOKEN_KEY);
@@ -159,9 +179,8 @@ export async function authFetch(url: string, options: RequestInit = {}): Promise
   }
   const response = await fetch(resolvedUrl, { ...options, headers });
 
-  // Auto-logout on auth failure
-  if (response.status === 401 || response.status === 403) {
-    // Only auto-logout if it's a token validation failure, not a role-based denial
+  // Auto-logout only on invalid/expired credentials, never on 403 permission denials
+  if (response.status === 401) {
     const body = await response.clone().json().catch(() => ({}));
     if (body?.detail === 'Could not validate credentials' || body?.detail === 'Not authenticated') {
       localStorage.removeItem(TOKEN_KEY);

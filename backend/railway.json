@@ -5,7 +5,7 @@
     "dockerfilePath": "Dockerfile"
   },
   "deploy": {
-    "startCommand": "python -c \"import os,uvicorn; uvicorn.run('app.main:app', host='0.0.0.0', port=int(os.environ.get('PORT','8000')))\"",
+    "startCommand": "python -c \"import os,sys,uvicorn; (os.chdir('backend'), sys.path.insert(0, '.')) if os.path.exists('backend') else None; uvicorn.run('app.main:app', host='0.0.0.0', port=int(os.environ.get('PORT','8000')))\"",
     "healthcheckPath": "/health",
     "healthcheckTimeout": 100,
     "restartPolicyType": "ON_FAILURE",

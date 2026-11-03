@@ -6,10 +6,12 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "CoalGuard AI"
     API_V1_STR: str = "/api"
     DATABASE_URL: str = "sqlite:///./coalguard.db"
-    FRONTEND_URL: str = "http://localhost:5173"
+    FRONTEND_URL: str = "https://sih-26024-implementation.vercel.app"
     SECRET_KEY: str = "default_secret_key_for_development_only_12345"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7 # 1 week
     CORS_ORIGINS: List[str] = [
+        "https://sih-26024-implementation.vercel.app",
+        "https://sih26024-implementation-production-3369.up.railway.app",
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "http://localhost:3000",

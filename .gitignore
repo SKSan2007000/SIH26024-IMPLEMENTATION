@@ -11,6 +11,8 @@ env/
 .env.local
 .env.*.local
 backend/.env
+!.env.production
+!frontend/.env.production
 
 # Build outputs
 frontend/dist/

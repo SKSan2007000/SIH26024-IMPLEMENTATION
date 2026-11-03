@@ -9,6 +9,7 @@ from apscheduler.triggers.cron import CronTrigger
 
 from app.core.config import settings
 from app.api.api import api_router
+from app.api.endpoints import auth
 from app.services.task_scheduler_service import TaskSchedulerService
 from app.db.session import SessionLocal, engine
 from app.db.base import Base
@@ -65,7 +66,19 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+# Explicitly ensure the exact production frontend origin and local dev origins are permitted
 cors_origins = list(settings.CORS_ORIGINS)
+for default_origin in [
+    "https://sih-26024-implementation.vercel.app",
+    "https://sih26024-implementation-production-3369.up.railway.app",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]:
+    if default_origin not in cors_origins:
+        cors_origins.append(default_origin)
+
 if settings.FRONTEND_URL and settings.FRONTEND_URL not in cors_origins:
     cors_origins.append(settings.FRONTEND_URL)
 
@@ -74,13 +87,16 @@ app.add_middleware(
     allow_origins=cors_origins,
     allow_origin_regex=r"https://.*\.vercel\.app|https://.*\.railway\.app|https://.*\.trycloudflare\.com|http://localhost(:\d+)?|http://127.0.0.1(:\d+)?",
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH", "HEAD"],
     allow_headers=["*"],
+    expose_headers=["*"],
+    max_age=86400,
 )
 
-# Support both /api and /api/v1 paths for seamless compatibility
+# Support /api, /api/v1, and root /auth for maximum frontend routing compatibility
 app.include_router(api_router, prefix="/api")
 app.include_router(api_router, prefix="/api/v1")
+app.include_router(auth.router, prefix="/auth", tags=["auth"])
 
 # Ensure uploads directory exists and mount static serving
 os.makedirs("uploads", exist_ok=True)
