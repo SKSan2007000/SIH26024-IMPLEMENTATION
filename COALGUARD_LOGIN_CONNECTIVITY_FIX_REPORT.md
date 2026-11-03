@@ -240,3 +240,4 @@ To deploy these fixes to both Railway and Vercel automatically:
 git push origin main
 ```
 Both Railway and Vercel will trigger automated zero-downtime builds. Vercel will bundle the embedded `VITE_API_URL` and deploy the `/api` reverse-proxy rules, while Railway will build the backend container with full multi-context support.
+
